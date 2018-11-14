@@ -102,7 +102,7 @@ def all_supplies_in_holidays(holiday_hash)
         message << format_words_in_array(holiday_words)
         message << ": "
         supplies.each do |supply|
-          if supply == "bbq"
+          if supply.downcase == "bbq"
             message << supply.upcase!
           else
             message << format_words_in_array(supply.split(" "))
