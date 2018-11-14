@@ -97,11 +97,9 @@ def all_supplies_in_holidays(holiday_hash)
 end
 
 def format_words_in_array(words)
-  message = ""
-  words.each do |word|
+  words.collect do |word|
     message << "#{word.capitalize}"
-  end
-  message
+  end.join(" ")
 end
 
 def all_holidays_with_bbq(holiday_hash)
