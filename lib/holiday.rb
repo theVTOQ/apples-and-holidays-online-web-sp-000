@@ -98,7 +98,7 @@ def all_supplies_in_holidays(holiday_hash)
     puts "#{season.to_s.capitalize}:"
     data.each do |holiday, supplies|
         message = "  "
-        holiday_words = holiday.to_s.split(" ")
+        holiday_words = holiday.to_s.split("_")
         message << format_words_in_array(holiday_words)
         message << ": "
         supplies.each do |supply|
