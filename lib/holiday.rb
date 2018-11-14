@@ -98,7 +98,7 @@ end
 
 def format_words_in_array(words)
   words.collect do |word|
-    message << "#{word.capitalize}"
+    "#{word.capitalize}"
   end.join(" ")
 end
 
