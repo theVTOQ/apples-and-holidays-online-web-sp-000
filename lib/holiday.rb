@@ -129,4 +129,6 @@ def all_holidays_with_bbq(holiday_hash)
          holidays_with_bbq << holiday if supplies.include?("bbq")
     end
   end
+
+  holidays_with_bbq
 end
