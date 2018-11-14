@@ -88,8 +88,8 @@ def all_supplies_in_holidays(holiday_hash)
         message << format_words_in_array(holiday_words)
         message << ": "
         supplies.each do |supply|
-          ending = supplies.index(supply) == supplies.size - 1 ? "" : ", "
-          message << format_words_in_array(supply.split(" "), ending)
+          message << format_words_in_array(supply.split(" "))
+          message << ", " if supplies.index(supply) != supplies.size - 1
         end
         puts message
     end
