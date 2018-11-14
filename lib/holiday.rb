@@ -103,7 +103,7 @@ def all_supplies_in_holidays(holiday_hash)
         message << ": "
         supplies.each do |supply|
           if supply.downcase == "bbq"
-            message << supply.upcase!
+            message << supply.upcase
           else
             message << format_words_in_array(supply.split(" "))
             message << ", " if supplies.index(supply) != supplies.size - 1
