@@ -85,7 +85,8 @@ def all_supplies_in_holidays(holiday_hash)
     data.each do |holiday, supplies|
         message = "  "
         holiday_words = holiday.to_s.split(" ")
-        message << format_words_in_array(holiday_words, ": ")
+        message << format_words_in_array(holiday_words)
+        message << ": "
         supplies.each do |supply|
           ending = supplies.index(supply) == supplies.size - 1 ? "" : ", "
           message << format_words_in_array(supply.split(" "), ending)
@@ -95,7 +96,7 @@ def all_supplies_in_holidays(holiday_hash)
   end
 end
 
-def format_words_in_array(words, ending)
+def format_words_in_array(words)
   message = ""
   words.each do |word|
     message << "#{word.capitalize}"
