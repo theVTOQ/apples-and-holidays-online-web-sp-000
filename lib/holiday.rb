@@ -99,7 +99,6 @@ def format_words_in_array(words, ending)
   message = ""
   words.each do |word|
     message << "#{word.capitalize}"
-    message << words.index(word) == words.size - 1 ? ending : " "
   end
   message
 end
